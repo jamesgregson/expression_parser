@@ -29,7 +29,7 @@
  
  Error handling is achieved using the setjmp() and longjmp() commands. To the best of my knowledge these are available on nearly all platforms, including embedded, platforms so the library should run happily even on AVRs (this has not been tested).
  
- Licence: GPLv2 for non-commercial use. Contact me for commercial licensing, including permission to redistribute the code. This code is provided as-is, with no warranty whatsoever.
+ Licence: GPLv2 for non-commercial use. Contact me for commercial licensing. This code is provided as-is, with no warranty whatsoever.
  
  Predefined variables and functions are accomodated with a callback interface that allows driver code to look up named variables and evaluate functions as required by the parser.  These callbacks must match the call-signature for the parser_variable_callback and parser_function_callback types below.  The variable callback takes the name of the variable to be looked up and returns true if the named variable value was copied into the output argument, returning false otherwise.  The function callback operates similarly, taking the name of the function to evaluate as well as a list of arguments to that function and (if successful) placing the evaluated function value in the return argument and returning true.  Function calls may be arbitrarily nested.
  */
